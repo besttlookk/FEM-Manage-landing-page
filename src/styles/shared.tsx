@@ -32,6 +32,9 @@ export const ButtonSharedStyle = styled.a<{ variant?: string }>`
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 95vw;
   max-width: 128rem;
   margin-inline: auto;
@@ -50,18 +53,14 @@ export const Heading2 = styled.h2`
   }
 `;
 
-export const SubHeading = styled.h3`
-  margin-bottom: 2rem;
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-  span {
-    display: block;
-  }
-
-  ${media.tablet} {
-    margin-bottom: 2.4rem;
-
-    span {
-      display: inline;
-    }
-  }
+export const Centered = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

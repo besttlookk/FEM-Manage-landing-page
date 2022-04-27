@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import media from "../styles/media";
-import { Wrapper } from "../styles/shared";
+import { Centered, Flex, Wrapper } from "../styles/shared";
 import FbIcon from "../images/icon-facebook.svg";
 import TwIcon from "../images/icon-twitter.svg";
 import YtIcon from "../images/icon-youtube.svg";
@@ -15,8 +15,7 @@ const FooterEl = styled.footer`
 
 const FooterWraper = styled(Wrapper)`
   position: relative;
-  display: flex;
-  flex-direction: column;
+  align-items: stretch;
   gap: 6rem;
   padding: 5.6rem 3.2rem;
   max-width: 56rem;
@@ -71,13 +70,10 @@ const InputEl = styled.input`
   }
 `;
 
-const Button = styled.button`
-  display: flex;
+const Button = styled(Centered)`
   border: none;
   height: 100%;
   width: 8rem;
-  align-items: center;
-  justify-content: center;
   text-transform: uppercase;
   border-radius: 100px;
   color: white;
@@ -123,10 +119,6 @@ const FlexItem = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-
-    ${media.tablet} {
-      /* align-items: flex-start; */
-    }
   }
 
   li {
@@ -141,10 +133,7 @@ const FlexItem = styled.div`
   }
 `;
 
-const LogoAndIconsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const LogoAndIconsWrapper = styled(Flex)`
   gap: 6rem;
 
   ${media.tablet} {
@@ -153,10 +142,7 @@ const LogoAndIconsWrapper = styled.div`
   }
 `;
 
-const Icons = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const Icons = styled(Centered)`
   gap: 4.8rem;
 
   svg {
@@ -254,7 +240,9 @@ const Footer = () => {
             />
             {error && <ErrorEl>{error}</ErrorEl>}
           </FormControl>
-          <Button type="submit">Go</Button>
+          <Button as="button" type="submit">
+            Go
+          </Button>
         </Form>
         <FooterLinks>
           {" "}

@@ -2,12 +2,9 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import media from "../styles/media";
-import { ButtonSharedStyle, Wrapper } from "../styles/shared";
+import { ButtonSharedStyle, Flex, Wrapper } from "../styles/shared";
 
 const SectionWrapper = styled(Wrapper)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 3.6rem;
 
   ${media.tablet} {
@@ -38,10 +35,7 @@ const ImageWrapper = styled.div`
   }
 `;
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Content = styled(Flex)`
   text-align: center;
   gap: 1.2rem;
   padding-inline: 2.4rem;

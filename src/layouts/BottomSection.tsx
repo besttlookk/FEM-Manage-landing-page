@@ -14,9 +14,9 @@ const Section = styled.section`
 `;
 
 const SectionWrapper = styled(Wrapper)`
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
   gap: 3.2rem;
   padding-block: 8rem;
   text-align: center;

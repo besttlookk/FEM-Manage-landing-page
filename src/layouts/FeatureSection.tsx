@@ -1,14 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Heading2, Wrapper } from "../styles/shared";
+import { Flex, Heading2, Wrapper } from "../styles/shared";
 import data from "../../data.json";
 import FeatureCard from "../components/FeatureCard";
 import media from "../styles/media";
 
 const SectionWrapper = styled(Wrapper)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-block: 8rem;
   padding-right: 0;
   width: 100vw;
@@ -24,10 +21,7 @@ const SectionWrapper = styled(Wrapper)`
   }
 `;
 
-const Header = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Header = styled(Flex)`
   text-align: center;
   gap: 1.6rem;
   max-width: 44rem;

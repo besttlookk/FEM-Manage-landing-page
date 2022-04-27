@@ -32,14 +32,6 @@ const NavEl = styled.nav`
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
 `;
 
-const AccountOptions = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  padding: 3.2rem 0;
-`;
-
 const MobileNavigation = ({ isMenuActive }: { isMenuActive: boolean }) => {
   return (
     <Wrapper className={isMenuActive ? "active" : ""}>

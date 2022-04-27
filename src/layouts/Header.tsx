@@ -20,8 +20,7 @@ const HeaderEl = styled.header`
 
 const HeaderWrapper = styled(Wrapper)`
   position: relative;
-  display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
   height: var(--height-header);
 `;

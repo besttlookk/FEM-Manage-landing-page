@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+
 import ReviewCard from "../components/ReviewCard";
-import { ButtonSharedStyle, Heading2 } from "../styles/shared";
+import { ButtonSharedStyle, Centered, Heading2 } from "../styles/shared";
 import data from "../../data.json";
 import media from "../styles/media";
 
@@ -42,10 +43,7 @@ const Dot = styled.div`
   }
 `;
 
-const Dots = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+const Dots = styled(Centered)`
   gap: 0.8rem;
   margin-block: 2.4rem 6rem;
 `;
